@@ -30,3 +30,15 @@ Count how many idols we have:
     {
       "count": 382
     }
+
+## Notes
+
+Because using Tumblr's API is a bit like pulling teeth, to "release early" I
+scraped all of the image URLs from a blog and put them in `images.py`. This
+isn't ideal for updating and I'd actually like to USE the API, you know, for
+more blogs and more GIFs. All of that is forthcoming once I've jumped off
+enough bridges to deal with Tumblr.
+
+## Special Thanks
+
+* http://aigaki.tumblr.com/ for all of the awesome Hello! Project related GIFs.
