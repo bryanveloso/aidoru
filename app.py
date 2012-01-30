@@ -27,7 +27,7 @@ def index():
 
 @app.route('/random')
 def random_idol():
-    idol = random.sample(images, 1)[0]
+    idol = random.choice(images)
     return jsonify({'idol': idol})
 
 
