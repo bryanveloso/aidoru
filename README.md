@@ -11,9 +11,9 @@ Fetch a random idol:
       "idol": "http://26.media.tumblr.com/tumblr_luz0q1X7AQ1r6j9k4o1_400.gif"
     }
 
-Bomb idols:
+Bomb idols (the `count` argument is optional, by default 5 idols are bombed):
 
-    $ curl http://aidoru-bomb.herokuapp.com/bomb
+    $ curl http://aidoru-bomb.herokuapp.com/bomb?count=5
     {
       "idols": [
         "http://24.media.tumblr.com/tumblr_lv4p1smS6I1r6j9k4o1_250.gif",
