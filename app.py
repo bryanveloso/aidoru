@@ -28,7 +28,7 @@ def index():
 @app.route('/random')
 def random_idol():
     idol = random.sample(images, 1)
-    return jsonify({'idol': idol})
+    return jsonify({'idol': str(idol)})
 
 
 @app.route('/bomb')
