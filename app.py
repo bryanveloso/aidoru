@@ -1,7 +1,7 @@
 import random
 import os
 
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from images import images
 
 
@@ -17,7 +17,7 @@ def index():
     d = {
         'resources': {
             '/random': 'A random picture of a Japanese idol.',
-            '/bomb': 'Bomb idols.',
+            '/bomb(?count=5)': 'Bomb idols. Optionally, set how many you\'d like to bomb.',
             '/count': 'The number of idols we have.'
         },
         'source': 'https://github.com/bryanveloso/aidoru'
@@ -33,7 +33,8 @@ def random_idol():
 
 @app.route('/bomb')
 def bomb_idols():
-    idols = random.sample(images, DEFAULT_BOMB)
+    count = request.args.get('count', DEFAULT_BOMB)
+    idols = random.sample(images, int(count))
     return jsonify({'idols': idols})
 
 
