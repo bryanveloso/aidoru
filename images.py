@@ -308,7 +308,6 @@ images = [
     'http://29.media.tumblr.com/tumblr_lvjr4h8KDM1r6j9k4o1_400.gif',
     'http://29.media.tumblr.com/tumblr_lvxfu9BQkc1r6j9k4o1_400.gif',
     'http://29.media.tumblr.com/tumblr_lx1kf87nB71r6j9k4o1_400.gif',
-    'http://29.media.tumblr.com/tumblr_lx37iyQ7Bd1qi5qyuo1_r1_500.gif',
     'http://29.media.tumblr.com/tumblr_lx9k1bFR4a1qcdo46o2_250.gif',
     'http://29.media.tumblr.com/tumblr_lxagz9Fqqh1r6j9k4o1_400.gif',
     'http://29.media.tumblr.com/tumblr_lxgfoo1WvS1r6j9k4o4_400.gif',
