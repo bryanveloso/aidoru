@@ -20,7 +20,10 @@ def index():
             '/bomb(?count=5)': 'Bomb idols. Optionally, set how many you\'d like to bomb.',
             '/count': 'The number of idols we have.'
         },
-        'source': 'https://github.com/bryanveloso/aidoru'
+        'source': 'https://github.com/bryanveloso/aidoru',
+        'thanks': [
+            'http://aigaki.tumblr.com/'
+        ]
     }
     return jsonify(d)
 
