@@ -22,7 +22,8 @@ def index():
         },
         'source': 'https://github.com/bryanveloso/aidoru',
         'thanks': [
-            'http://aigaki.tumblr.com/'
+            'http://aigaki.tumblr.com/',
+            'http://fyeahrokkies.tumblr.com/'
         ]
     }
     return jsonify(d)

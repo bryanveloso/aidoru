@@ -41,4 +41,7 @@ enough bridges to deal with Tumblr.
 
 ## Special Thanks
 
-* http://aigaki.tumblr.com/ for all of the awesome Hello! Project related GIFs.
+I'd like to extend my gratitude to these fine sites:
+
+* http://aigaki.tumblr.com/
+* http://fyeahrokkies.tumblr.com/
