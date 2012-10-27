@@ -1,17 +1,17 @@
 from django.conf.urls import patterns, include, url
+from django.contrib import admin
 
-# Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from modules.images.views import CountTheImagesView, RandomImageChoiceView
+
+
+admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'aidoru.views.home', name='home'),
-    # url(r'^aidoru/', include('aidoru.foo.urls')),
+    # url(r'^$', '', name='home'),
 
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    # Endpoints (backwards-compatible with the Flask version).
+    url(r'^count/$', CountTheImagesView.as_view(), name='count'),
+    url(r'^random/$', RandomImageChoiceView.as_view(), name='random'),
 
-    # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
 )
