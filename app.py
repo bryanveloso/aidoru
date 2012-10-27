@@ -6,7 +6,7 @@ from images import images
 
 
 app = Flask(__name__)
-app.debug = True
+app.debug = False
 
 # The number of idols we drop by default.
 DEFAULT_BOMB = 5
