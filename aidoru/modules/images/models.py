@@ -19,8 +19,8 @@ class ImageManager(models.Manager):
 
 class Image(TimeStampedModel):
     # Identification.
-    token = models.CharField(max_length=6)
-    url = models.URLField(verify_exists=True)
+    token = models.CharField(editable=False, max_length=6)
+    url = models.URLField('URL', verify_exists=True)
 
     # Categorization.
     tags = models.ManyToManyField('Tag')
@@ -30,7 +30,26 @@ class Image(TimeStampedModel):
     objects = ImageManager()
 
     def __unicode__(self):
-        return u'%s' % self.url
+        return u'%s' % self.token
+
+    def save(self, *args, **kwargs):
+        super(Image, self).save(*args, **kwargs)
+        self.token = self.create_token()
+        self.save()
+
+    def create_token(self):
+        from multiprocessing.dummy import list
+        ALPHABET = list('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789')
+
+        i = self.id
+        if i == 0:
+            return ALPHABET[0]
+        s = ''
+        base = len(ALPHABET)
+        while i > 0:
+            s += ALPHABET[i % base]
+            i /= base
+        return s[::-1]
 
 
 class Tag(models.Model):
