@@ -47,7 +47,10 @@ class Base(Settings):
         'gunicorn',
         'tastypie'
     ]
-    INSTALLED_APPS = DJANGO_APPLICATIONS + COMPONENTS + PLUGINS
+    ADMINISTRATION = [
+        'django.contrib.admin',
+    ]
+    INSTALLED_APPS = DJANGO_APPLICATIONS + COMPONENTS + PLUGINS + ADMINISTRATION
 
     # Python dotted path to the WSGI application used by Django's runserver.
     WSGI_APPLICATION = 'wsgi.application'
