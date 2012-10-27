@@ -41,16 +41,9 @@ class Base(Settings):
         'django.contrib.sessions',
         'django.contrib.staticfiles'
     ]
-    COMPONENTS = [
-        'modules.images'
-    ]
-    PLUGINS = [
-        'gunicorn',
-        'tastypie'
-    ]
-    ADMINISTRATION = [
-        'django.contrib.admin',
-    ]
+    COMPONENTS = ['modules.images']
+    PLUGINS = ['gunicorn']
+    ADMINISTRATION = ['django.contrib.admin']
     INSTALLED_APPS = DJANGO_APPLICATIONS + COMPONENTS + PLUGINS + ADMINISTRATION
 
     # Python dotted path to the WSGI application used by Django's runserver.
