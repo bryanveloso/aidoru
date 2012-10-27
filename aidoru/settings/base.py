@@ -38,6 +38,7 @@ class Base(Settings):
     DJANGO_APPLICATIONS = [
         'django.contrib.auth',
         'django.contrib.contenttypes',
+        'django.contrib.sessions',
         'django.contrib.staticfiles'
     ]
     COMPONENTS = [
