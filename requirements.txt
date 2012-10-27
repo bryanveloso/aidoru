@@ -1,2 +1,6 @@
-Flask==0.9
-gunicorn==0.15.0
+dj-database-url == 0.2.1
+django == 1.4.2
+django-configurations == 0.1
+django-tastypie == 0.9.11
+gunicorn == 0.15.0
+psycopg2 == 2.4.5
