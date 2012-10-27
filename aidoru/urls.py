@@ -1,13 +1,14 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
-from modules.images.views import CountTheImagesView, RandomImageChoiceView
+from modules.images.views import (CountTheImagesView, IndexView,
+    RandomImageChoiceView)
 
 
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    # url(r'^$', '', name='home'),
+    url(r'^$', IndexView.as_view(), name='index'),
 
     # Endpoints (backwards-compatible with the Flask version).
     url(r'^count/$', CountTheImagesView.as_view(), name='count'),
