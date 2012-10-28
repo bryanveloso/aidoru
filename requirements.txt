@@ -1,11 +1,13 @@
+boto == 2.6.0
 dj-database-url == 0.2.1
 django == 1.4.2
 django-braces == 0.1.7
 django-configurations == 0.1
+django-grappelli == 2.4.2
 django-model-utils == 1.1.0
-django-selectable == 0.6.1
 django-taggit == 0.9.3
 django-tastypie == 0.9.11
+django-storages == 1.1.5
 gevent == 0.13.8
 gunicorn == 0.15.0
 psycopg2 == 2.4.5

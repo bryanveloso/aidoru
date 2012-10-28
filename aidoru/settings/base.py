@@ -54,10 +54,12 @@ class Base(Settings):
     ]
     PLUGINS = [
         'gunicorn',
-        'selectable',
         'taggit'
     ]
-    ADMINISTRATION = ['django.contrib.admin']
+    ADMINISTRATION = [
+        'grappelli',
+        'django.contrib.admin'
+    ]
     INSTALLED_APPS = DJANGO_APPLICATIONS + COMPONENTS + PLUGINS + ADMINISTRATION
 
     # Python dotted path to the WSGI application used by Django's runserver.
@@ -104,5 +106,5 @@ class Base(Settings):
     STATIC_ROOT = normpath(join(SITE_ROOT, 'static'))
     STATIC_URL = '/static/'
 
-    # Django Tastypie
-    TASTYPIE_DATETIME_FORMATTING = 'rfc-2822'
+    # Django Grappelli
+    GRAPPELLI_ADMIN_TITLE = 'Aidoru'
