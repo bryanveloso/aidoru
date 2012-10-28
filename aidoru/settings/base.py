@@ -47,7 +47,8 @@ class Base(Settings):
     ]
     PLUGINS = [
         'gunicorn',
-        'selectable'
+        'selectable',
+        'taggit'
     ]
     ADMINISTRATION = ['django.contrib.admin']
     INSTALLED_APPS = DJANGO_APPLICATIONS + COMPONENTS + PLUGINS + ADMINISTRATION
