@@ -115,6 +115,7 @@ class Base(Settings):
     }
     AWS_PRELOAD_METADATA = True
     AWS_QUERYSTRING_AUTH = False
+    AWS_STORAGE_BUCKET_NAME = 'aidoru'
 
     # Django Grappelli
     GRAPPELLI_ADMIN_TITLE = 'Aidoru'
