@@ -16,5 +16,6 @@ urlpatterns = patterns('',
     url(r'^bomb/$', BombIdolsView.as_view(), name='bomb'),
 
     url(r'^admin/', include(admin.site.urls)),
+    (r'^grappelli/', include('grappelli.urls')),
     (r'^selectable/', include('selectable.urls')),
 )
