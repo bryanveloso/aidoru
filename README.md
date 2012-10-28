@@ -15,7 +15,7 @@ Bomb idols (the `count` argument is optional, by default 5 idols are bombed):
 
     $ curl http://aidoru-bomb.herokuapp.com/bomb?count=5
     {
-      "idols": [
+      "blast": [
         "http://24.media.tumblr.com/tumblr_lv4p1smS6I1r6j9k4o1_250.gif",
         "http://30.media.tumblr.com/tumblr_lxpdfl8cvS1r6j9k4o1_400.gif",
         "http://27.media.tumblr.com/tumblr_luz4a5t80W1r6j9k4o1_400.gif",
