@@ -9,22 +9,21 @@ from django.db.models import get_model
 import selectable.forms as selectable
 
 from modules.images.models import Image, Tag
-from modules.images.lookups import TagLookup
+from modules.images.lookups import IdolLookup, TagLookup
 
 
 class ImageAdminForm(forms.ModelForm):
     class Meta(object):
         model = Image
         widgets = {
+            'idols': selectable.AutoCompleteSelectMultipleWidget(lookup_class=IdolLookup),
             'tags': selectable.AutoCompleteSelectMultipleWidget(lookup_class=TagLookup)
         }
 
 
 class ImageAdmin(admin.ModelAdmin):
     form = ImageAdminForm
+
+
 admin.site.register(Image, ImageAdmin)
-
-
-class TagAdmin(admin.ModelAdmin):
-    pass
-admin.site.register(Tag, TagAdmin)
+admin.site.register(Tag)

@@ -8,6 +8,7 @@ from django.db import models
 from django.db.models import Count
 
 from model_utils.models import TimeStampedModel
+from modules.people.models import Idol
 
 
 class ImageManager(models.Manager):
@@ -24,7 +25,7 @@ class Image(TimeStampedModel):
 
     # Categorization.
     tags = models.ManyToManyField('Tag')
-    idols = models.TextField(blank=True)
+    idols = models.ManyToManyField(Idol)
 
     # Managers
     objects = ImageManager()

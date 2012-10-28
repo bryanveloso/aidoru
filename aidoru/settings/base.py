@@ -41,7 +41,10 @@ class Base(Settings):
         'django.contrib.sessions',
         'django.contrib.staticfiles'
     ]
-    COMPONENTS = ['modules.images']
+    COMPONENTS = [
+        'modules.images',
+        'modules.people'
+    ]
     PLUGINS = [
         'gunicorn',
         'selectable'
