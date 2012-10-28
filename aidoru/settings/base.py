@@ -37,8 +37,10 @@ class Base(Settings):
     # Template Settings
     TEMPLATE_DIRS = (normpath(join(DJANGO_ROOT, 'templates')),)
     TEMPLATE_LOADERS = (
-        'django.template.loaders.filesystem.Loader',
-        'django.template.loaders.app_directories.Loader',
+        ('django.template.loaders.cached.Loader', (
+            'django.template.loaders.filesystem.Loader',
+            'django.template.loaders.app_directories.Loader',
+        )),
     )
 
     # Installed Applications
