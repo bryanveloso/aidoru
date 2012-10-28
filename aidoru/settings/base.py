@@ -107,5 +107,5 @@ class Base(Settings):
     STATIC_ROOT = normpath(join(SITE_ROOT, 'static'))
     STATIC_URL = '/static/'
 
-    # Django Tastypie
-    TASTYPIE_DATETIME_FORMATTING = 'rfc-2822'
+    # Django Grappelli
+    GRAPPELLI_ADMIN_TITLE = 'Aidoru'

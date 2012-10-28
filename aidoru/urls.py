@@ -19,3 +19,4 @@ urlpatterns = patterns('',
     (r'^grappelli/', include('grappelli.urls')),
     (r'^selectable/', include('selectable.urls')),
 )
+
