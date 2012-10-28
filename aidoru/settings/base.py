@@ -42,7 +42,10 @@ class Base(Settings):
         'django.contrib.staticfiles'
     ]
     COMPONENTS = ['modules.images']
-    PLUGINS = ['gunicorn']
+    PLUGINS = [
+        'gunicorn',
+        'selectable'
+    ]
     ADMINISTRATION = ['django.contrib.admin']
     INSTALLED_APPS = DJANGO_APPLICATIONS + COMPONENTS + PLUGINS + ADMINISTRATION
 

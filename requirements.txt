@@ -3,6 +3,7 @@ django == 1.4.2
 django-braces == 0.1.7
 django-model-utils == 1.1.0
 django-configurations == 0.1
+django-selectable == 0.6.1
 django-tastypie == 0.9.11
 gunicorn == 0.15.0
 psycopg2 == 2.4.5
