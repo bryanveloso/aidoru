@@ -4,7 +4,6 @@ logger = logging.getLogger(__name__)
 
 from django import forms
 from django.contrib import admin
-from django.db.models import get_model
 
 import selectable.forms as selectable
 
