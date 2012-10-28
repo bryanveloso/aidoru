@@ -8,6 +8,14 @@ from base import Base as Settings
 class Production(Settings):
     DEBUG = True
 
+    # Media Settings
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+    MEDIA_URL = '//aidoru.s3.amazonaws.com/'
+
+    # Static Media Settings
+    STATIC_URL = '//aidoru.s3.amazonaws.com/'
+    STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+
     # Secret Key
     if hasattr(os.environ, 'SECUREKEY_CRIMSON_KEY'):
         SECRET_KEY = os.environ['SECUREKEY_CRIMSON_KEY'].split(',')[0]
