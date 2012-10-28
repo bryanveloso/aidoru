@@ -8,7 +8,11 @@ Fetch a random idol:
 
     $ curl http://aidoru-bomb.herokuapp.com/random
     {
-      "idol": "http://26.media.tumblr.com/tumblr_luz0q1X7AQ1r6j9k4o1_400.gif"
+      "url": "http://25.media.tumblr.com/tumblr_m3tk8uBt2U1r6j9k4o2_r3_500.gif",
+      "idols": [
+        "takahashi-ai"
+      ],
+      "token": "f"
     }
 
 Bomb idols (the `count` argument is optional, by default 5 idols are bombed):

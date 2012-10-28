@@ -30,6 +30,7 @@ class RandomImageChoiceView(JSONResponseMixin, View):
         json_dict = {}
         json_dict['token'] = self.object.token
         json_dict['url'] = self.object.url
+        json_dict['idols'] = [i.slug for i in self.object.idols.all()]
         return self.render_json_response(json_dict)
 
 
