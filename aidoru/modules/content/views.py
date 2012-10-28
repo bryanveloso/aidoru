@@ -3,7 +3,7 @@ import random
 from django.views.generic import View
 
 from braces.views import JSONResponseMixin
-from modules.images.models import Image
+from modules.content.models import Image
 
 
 class IndexView(JSONResponseMixin, View):

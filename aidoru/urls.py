@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
-from modules.images.views import (BombIdolsView, CountTheImagesView,
+from modules.content.views import (BombIdolsView, CountTheImagesView,
     IndexView, RandomImageChoiceView)
 
 

@@ -4,7 +4,7 @@ logger = logging.getLogger(__name__)
 
 from django.contrib import admin
 
-from modules.images.models import Image
+from modules.content.models import Image
 
 
 class ImageAdmin(admin.ModelAdmin):

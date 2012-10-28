@@ -49,7 +49,7 @@ class Base(Settings):
         'django.contrib.staticfiles'
     ]
     COMPONENTS = [
-        'modules.images',
+        'modules.content',
         'modules.people'
     ]
     PLUGINS = [
