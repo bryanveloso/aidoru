@@ -25,7 +25,7 @@ class Image(TimeStampedModel):
 
     # Categorization.
     tags = models.ManyToManyField('Tag')
-    idols = models.TextField(blank=True)
+    idols = models.ManyToManyField(Idol)
 
     # Managers
     objects = ImageManager()
