@@ -9,6 +9,7 @@ from django.db.models import Count
 
 from model_utils.models import TimeStampedModel
 from modules.people.models import Idol
+from taggit.managers import TaggableManager
 
 
 class ImageManager(models.Manager):
@@ -24,7 +25,7 @@ class Image(TimeStampedModel):
     url = models.URLField('URL', verify_exists=True)
 
     # Categorization.
-    tags = models.ManyToManyField('Tag')
+    tags = TaggableManager()
     idols = models.ManyToManyField(Idol)
 
     # Managers
@@ -51,10 +52,3 @@ class Image(TimeStampedModel):
             s += ALPHABET[i % base]
             i /= base
         return s[::-1]
-
-
-class Tag(models.Model):
-    name = models.CharField(max_length=255)
-
-    def __unicode__(self):
-        return u'%s' % self.name
