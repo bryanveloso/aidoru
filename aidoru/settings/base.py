@@ -54,7 +54,6 @@ class Base(Settings):
     ]
     PLUGINS = [
         'gunicorn',
-        'selectable',
         'taggit'
     ]
     ADMINISTRATION = [
