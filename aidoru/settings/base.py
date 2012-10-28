@@ -106,5 +106,17 @@ class Base(Settings):
     STATIC_ROOT = normpath(join(SITE_ROOT, 'static'))
     STATIC_URL = '/static/'
 
+    # Django Storages
+    AWS_ACCESS_KEY_ID = getattr(os.environ, 'AWS_ACCESS_KEY_ID', '')
+    AWS_SECRET_ACCESS_KEY = getattr(os.environ, 'AWS_SECRET_ACCESS_KEY', '')
+    AWS_HEADERS = {
+        'Expires': (datetime.date.today() + datetime.timedelta(days=365)).strftime('%a, %d %b %Y 20:00:00 GMT'),
+        'Cache-Control': 'max-age=31536000, private'
+    }
+    AWS_PRELOAD_METADATA = True
+    AWS_QUERYSTRING_AUTH = False
+    AWS_STORAGE_BUCKET_NAME = MEDIA_STORAGE_BUCKET_NAME
+    AWS_STATIC_STORAGE_BUCKET_NAME = STATIC_STORAGE_BUCKET_NAME
+
     # Django Grappelli
     GRAPPELLI_ADMIN_TITLE = 'Aidoru'
