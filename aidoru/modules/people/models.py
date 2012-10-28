@@ -11,3 +11,7 @@ class Idol(models.Model):
 
     def __unicode__(self):
         return u'%s' % (self.name)
+
+    @staticmethod
+    def autocomplete_search_fields():
+        return ('name__icontains',)
