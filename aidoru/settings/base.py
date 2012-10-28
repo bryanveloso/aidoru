@@ -34,6 +34,13 @@ class Base(Settings):
     USE_L10N = True
     USE_TZ = True
 
+    # Template Settings
+    TEMPLATE_DIRS = (normpath(join(DJANGO_ROOT, 'templates')),)
+    TEMPLATE_LOADERS = (
+        'django.template.loaders.filesystem.Loader',
+        'django.template.loaders.app_directories.Loader',
+    )
+
     # Installed Applications
     DJANGO_APPLICATIONS = [
         'django.contrib.auth',
